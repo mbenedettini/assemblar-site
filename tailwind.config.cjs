@@ -69,6 +69,12 @@ const colors = {
     900: '#204a1d',
     950: '#0d280b',
   },
+  'gray-blue': {
+    100: '#D0D1D2',
+    200: '#d6dce3',
+    300: '#bec5ce',
+    900: '#1D2128',
+  },
 };
 
 /** @type {import('tailwindcss').Config} */
@@ -93,6 +99,16 @@ module.exports = {
           'linear-gradient(180deg, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0) 113.83%)',
         'gradient-card-cover':
           'linear-gradient(180deg, #2A313E 30%, rgba(32, 38, 49, 0) 132.88%)',
+        'gradient-founder':
+          'linear-gradient(180deg, #202631 24.4%, rgba(32, 38, 49, 0) 113.68%)',
+        'gradient-advisor':
+          'linear-gradient(180deg, #202631 24.4%, #13171F 113.68%)',
+        'gradient-team':
+          'linear-gradient(180deg, #202631 24.4%, rgba(32, 38, 49, 0) 113.68%)',
+        'gradient-contact':
+          'linear-gradient(180deg, #202631 0%, rgba(32, 38, 49, 0) 94.33%)',
+        'gradient-contractor':
+          'linear-gradient(180deg, #202631 19.17%, rgba(32, 38, 49, 0) 110.28%)',
       },
       safelist: ['!translate-x-0'],
       keyframes: {
