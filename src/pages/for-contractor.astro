@@ -1,0 +1,80 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { HeaderItem } from '../enums/headerEnums';
+---
+
+<Layout
+  title='For Contractors | Assemblar'
+  currentPath={HeaderItem.ForContractor}
+>
+  <h1
+    class='px-4 text-center text-4xl md:text-6xl font-black pt-9 md:pt-14 pb-12 md:pb-24'
+  >
+    For Contractors
+  </h1>
+
+  <section class='mb-24 md:mb-32'>
+    <div
+      class='flex flex-col md:flex-row items-center gap-16 md:gap-14 mb-14 md:mb-28'
+    >
+      <div class='order-2 md:order-1 aspect-[276/127]'>
+        <div
+          class='bg-gradient-contractor absolute h-[15rem] md:h-[21rem] w-[18rem] md:w-[25rem] -translate-y-8 left-0 -z-10 rounded-r-3xl'
+        >
+        </div>
+        <img
+          class='w-full'
+          src='/images/for_contractors.webp'
+          alt='For Contractors'
+        />
+      </div>
+      <div
+        class='order-1 md:order-2 grow text-sm md:text-base text-white/80 font-medium md:max-w-[50%]'
+      >
+        <p class='mb-2'>
+          Assemblar is an Agency that aims to connect companies from the US -
+          with a focus on startups - with the best talent available in
+          Argentina. We typically look for all kinds of Software Engineers that
+          are wanting long-term careers with ventures all across the US.
+        </p>
+        <p>
+          The best talent does not always mean senior or with extensive
+          experience: we love to find potential in those that are hungry for
+          challenges and haven’t had the opportunity to give their best.
+        </p>
+      </div>
+    </div>
+
+    <div class='max-w-[58rem] mx-auto'>
+      <p class='text-2xl md:text-3xl font-black text-center mb-12 md:mb-14'>
+        What can you expect from <span class='bg-primary'>Assemblar</span> that is
+        different from other Companies that look the same at first sight?
+      </p>
+      <p
+        class='font-bold pb-6 md:pb-8 mb-6 md:mb-8 border-b border-[rgba(214,220,227,0.2)]'
+      >
+        First and foremost, a better wage: we run a lean structure that helps us
+        keep our fees to a minimum so that we can pay you more money while also
+        charging less our clients.
+      </p>
+      <p
+        class='font-bold text-white/80 pb-6 md:pb-8 mb-6 md:mb-8 border-b border-[rgba(214,220,227,0.2)]'
+      >
+        We are not a middleman: we keep our involvement between you and your
+        employer to a minimum, nearly zero. You won’t have any kind of Manager
+        or Delivery guy at Assemblar as sometimes happens with other Agencies:
+        100% of what happens with your work will be between you and the company
+        you actually work for.
+      </p>
+      <p class='font-bold text-white/80'>
+        Clear rules for benefits such as time off: you won’t have to fight for
+        it, it will be clearly agreed so that everyone is aware of it.
+      </p>
+    </div>
+  </section>
+</Layout>
+
+<style lang='sass'>
+  .bg-gradient-contractor
+    background: linear-gradient(180deg, #202631 19.17%, rgba(32, 38, 49, 0) 110.28%)
+</style>

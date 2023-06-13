@@ -1,0 +1,37 @@
+<div>
+  <div
+    class='border-t-[3px] border-x-[3px] border-b-2 rounded-t-xl border-white/10 flex px-4 py-3 md:p-6 gap-4'
+  >
+    <span class='w-4 h-4 md:w-6 md:h-6 bg-mandy-400 rounded-full'></span>
+    <span class='w-4 h-4 md:w-6 md:h-6 bg-sandy-brown-300 rounded-full'></span>
+    <span class='w-4 h-4 md:w-6 md:h-6 bg-mantis rounded-full'></span>
+  </div>
+  <div
+    class='md:text-left border-gradient-inter pt-4 md:pt-10 pl-4 md:pl-10 pr-4 md:pr-8'
+  >
+    <slot />
+  </div>
+  <div
+    class='border-b-[3px] border-x-[3px] rounded-b-xl border-white/[0.01] pb-9 md:pb-10'
+  >
+  </div>
+</div>
+
+<style lang='sass'>
+  .border-gradient-inter
+    border-left: 3px solid transparent
+    border-right: 3px solid transparent
+    position: relative
+    &::before,
+    &::after
+      content: ''
+      position: absolute
+      top: 0
+      width: 3px
+      height: 100%
+      background: linear-gradient(to top, rgb(255 255 255 / 0.01), rgb(255 255 255 / 0.1))
+    &::before
+      left: -3px
+    &::after
+      right: -3px
+</style>

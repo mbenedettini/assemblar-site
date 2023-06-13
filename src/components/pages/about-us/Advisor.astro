@@ -1,0 +1,44 @@
+---
+interface Props {
+  image: string;
+  name: string;
+  position: string;
+  description: string;
+}
+
+const { image, name, position, description } = Astro.props;
+---
+
+<div class='flex flex-col'>
+  <img
+    class='aspect-square object-cover object-top rounded-t-lg'
+    src={image}
+    alt={name}
+  />
+
+  <div
+    class='grow bg-gradient-advisor px-6 pt-6 pb-6 md:pb-8 rounded-xl -top-2 relative'
+  >
+    <div class='flex justify-between items-start gap-2 mb-1 md:mb-2'>
+      <div>
+        <p class='text-base md:text-xl font-black'>{name}</p>
+      </div>
+      <span class='flex gap-2 items-center min-w-[6rem]'>
+        <img src='/images/linkedin.svg' alt='Linkedin' />
+        <p class='underline'>Linkedin</p>
+      </span>
+    </div>
+    <p
+      class='text-sm md:text-base font-bold text-primary mb-5 md:mb-6 max-w-[19.75rem]'
+    >
+      {position}
+    </p>
+
+    <p class='text-white/80 text-sm'>{description}</p>
+  </div>
+</div>
+
+<style lang='sass'>
+  .bg-gradient-advisor
+    background: linear-gradient(180deg, #202631 24.4%, #13171F 113.68%)
+</style>

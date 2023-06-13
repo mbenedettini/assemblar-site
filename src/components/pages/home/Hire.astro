@@ -1,0 +1,112 @@
+---
+import ListItem from './ListItem.astro';
+import TitleBox from './TitleBox.astro';
+import WindowCard from './WindowCard.astro';
+
+const list = [
+  {
+    image: '/images/h-money.svg',
+    title: 'Reduce Your Business Cost and Overhead',
+    description:
+      'Argentina is ideally located, benefitting from a perfectly situated time zone (ET+1). Granting access to the Argentinian based team members to be easily integrated within your US teams to take on-call rotations. <div class="py-1"></div>We operate with affordability in mind, keeping every process as cost-efficient as possible. Allowing our pricing to be unmatched, resulting in a lower cost for our Clients and higher compensations for the Engineers and product teams.',
+  },
+  {
+    image: '/images/h-money.svg',
+    title: 'Simplified Onboarding and Payroll',
+    description:
+      'Utilize our efficient onboarding system that takes care of everything, allowing your new software engineers for hire and product team roles to be integrated smoothly.<div class="py-1"></div>We operate a start-to-finish system, handling all onboarding procedures including payroll. Utilizing a unified monthly invoicing system with straightforward US based contractual terms, to streamline the payroll process for the duration of your service.',
+  },
+  {
+    image: '/images/h-equipment.svg',
+    title: 'Equipment Provisioning Included',
+    description:
+      'We can provide your team with any high-end technical equipment needed from MacBooks tp PCs and more at competitive pricing.',
+  },
+];
+---
+
+<section class='mb-16 md:mb-32'>
+  <TitleBox title='Hire' bg='bg-sandy-brown' />
+
+  <div class='grid grid-cols-1 lg:grid-cols-2 gap-11 lg:gap-16'>
+    <div class='flex flex-col gap-10'>
+      {
+        list.map((item) => (
+          <ListItem
+            image={item.image}
+            title={item.title}
+            description={item.description}
+          />
+        ))
+      }
+    </div>
+    <div>
+      <WindowCard>
+        <div class='flex justify-between items-center mb-8 md:mb-10'>
+          <p class='text-sm md:text-2xl font-bold'>Employee Detail</p>
+
+          <div class='max-w-[8.25rem] md:max-w-[12.5rem] w-full'>
+            <p class='text-sm md:text-2xl font-bold mb-2'>Tech Division</p>
+            <div class='bg-gradient-title h-4 md:h-5 w-full rounded-lg'></div>
+          </div>
+        </div>
+
+        <div class='flex justify-between items-center mb-10'>
+          <div class='flex gap-4 md:gap-7 items-center grow'>
+            <img
+              class='w-14 md:w-[4.5rem]'
+              src='/images/john.webp'
+              alt='John Doe'
+            />
+            <div class='grow'>
+              <div class='text-base md:text-2xl font-black mb-2 md:mb-4'>
+                John Doe
+              </div>
+              <div
+                class='bg-gradient-title h-4 md:h-5 w-full max-w-[11.75rem] md:max-w-[18rem] rounded-lg'
+              >
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class='flex gap-5 md:gap-6 mb-8'>
+          <div
+            class='bg-gradient-card rounded-2xl grow p-2 max-w-[55%] aspect-[95/84] flex items-center justify-center'
+          >
+            <img
+              class='max-w-[3.75rem] md:max-w-[7.5rem]'
+              src='/images/document.svg'
+              alt='Document'
+            />
+          </div>
+
+          <div class='flex flex-col gap-3 md:gap-4 grow'>
+            <div
+              class='bg-gradient-description h-4 md:h-5 w-full max-w-[7rem] md:max-w-[14rem] rounded-lg'
+            >
+            </div>
+            <div
+              class='bg-gradient-description h-4 md:h-8 w-full max-w-[6.25rem] md:max-w-[12.5rem] rounded-lg'
+            >
+            </div>
+            <div class='bg-gradient-card-medium w-full rounded-2xl grow'></div>
+          </div>
+        </div>
+
+        <div class='text-center'>
+          <div
+            class='inline-block border border-primary text-sm font-bold py-2 md:py-3 px-5 md:px-10 rounded-3xl relative mr-4'
+          >
+            Onboarding
+          </div>
+          <div
+            class='inline-block opacity-50 border border-white text-sm font-bold py-2 md:py-3 px-5 md:px-10 rounded-3xl relative'
+          >
+            $ Payroll
+          </div>
+        </div>
+      </WindowCard>
+    </div>
+  </div>
+</section>

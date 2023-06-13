@@ -1,0 +1,25 @@
+---
+interface Props {
+  label: string;
+  name: string;
+  placeholder: string;
+}
+
+const { label, name, placeholder } = Astro.props;
+---
+
+<div>
+  <label class='mb-2 text-primary block text-sm' for={name}>{label}</label>
+  <div
+    class='flex items-center gap-2 px-4 py-3 rounded-lg border border-[rgba(190,197,206,0.6)] bg-[#1D2128]'
+  >
+    <slot name='icon' />
+
+    <input
+      class='text-sm bg-transparent placeholder:text-white w-full outline-none'
+      type='text'
+      {name}
+      {placeholder}
+    />
+  </div>
+</div>

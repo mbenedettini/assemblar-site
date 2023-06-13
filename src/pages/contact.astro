@@ -1,0 +1,40 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { HeaderItem } from '../enums/headerEnums';
+import Form from '../components/pages/contact/Form.astro';
+---
+
+<Layout title='Contact Us | Assemblar' currentPath={HeaderItem.Contact}>
+  <h1
+    class='text-center text-4xl md:text-6xl font-black pt-9 md:pt-14 pb-12 md:pb-20'
+  >
+    Contact Us
+  </h1>
+
+  <section class='mb-14 md:mb-16'>
+    <div id='parent-asks' class='flex flex-col md:flex-row gap-28 md:gap-24'>
+      <div class='grow'>
+        <Form />
+      </div>
+
+      <div class='grow w-full md:max-w-[50%] aspect-[187/125]'>
+        <div class='absolute aspect-[187/125]'>
+          <img
+            class='w-screen'
+            src='/images/contact-us.webp'
+            alt='Contact Us'
+          />
+          <div
+            class='bg-gradient-contact absolute h-[15rem] md:h-[15.5rem] w-[15rem] md:w-[31.75rem] -top-16 md:-top-28 right-0 md:-right-20 -z-10 rounded-l-3xl'
+          >
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<style lang='sass'>
+  .bg-gradient-contact
+    background: linear-gradient(180deg, #202631 0%, rgba(32, 38, 49, 0) 94.33%)
+</style>

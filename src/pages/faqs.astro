@@ -1,0 +1,97 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { HeaderItem } from '../enums/headerEnums';
+import Faq from '../components/pages/faqs/Faq.astro';
+
+const asks = [
+  {
+    ask: 'Why should I hire Assemblar services instead of competitors',
+    answer:
+      'All roles related with Product and Engineering: Product Manager, Marketing Designer, UI/UX Designer, Web Engineers (Full Stack, Back-End, Front-End), Mobile Engineers (iOS, Android), Data/ML Engineers, and the list goes on.',
+  },
+  {
+    ask: 'What value does Assemblar have over finding my own team with a recruiting agency and directly hiring them using a payroll and compliance provider?',
+    answer:
+      'All roles related with Product and Engineering: Product Manager, Marketing Designer, UI/UX Designer, Web Engineers (Full Stack, Back-End, Front-End), Mobile Engineers (iOS, Android), Data/ML Engineers, and the list goes on.',
+  },
+  {
+    ask: 'Are you located in Argentina or in the US?',
+    answer:
+      'All roles related with Product and Engineering: Product Manager, Marketing Designer, UI/UX Designer, Web Engineers (Full Stack, Back-End, Front-End), Mobile Engineers (iOS, Android), Data/ML Engineers, and the list goes on.',
+  },
+  {
+    ask: 'What kind of roles can you hire?',
+    answer:
+      'All roles related with Product and Engineering: Product Manager, Marketing Designer, UI/UX Designer, Web Engineers (Full Stack, Back-End, Front-End), Mobile Engineers (iOS, Android), Data/ML Engineers, and the list goes on.',
+  },
+  {
+    ask: 'Why should I hire in Argentina instead of other countries in Latin America or even the rest of the World?',
+    answer:
+      'All roles related with Product and Engineering: Product Manager, Marketing Designer, UI/UX Designer, Web Engineers (Full Stack, Back-End, Front-End), Mobile Engineers (iOS, Android), Data/ML Engineers, and the list goes on.',
+  },
+];
+---
+
+<Layout title='FAQs | Assemblar' currentPath={HeaderItem.FAQs}>
+  <h1
+    class='px-4 text-center text-4xl md:text-6xl font-black pt-9 md:pt-14 pb-12 md:pb-24'
+  >
+    Frequently Asked Question
+  </h1>
+
+  <section class='mb-14 md:mb-32 max-w-[58.125rem] mx-auto'>
+    <div id='parent-asks' class='flex flex-col gap-1 md:gap-2.5 max-w-173'>
+      {asks.map((item) => <Faq ask={item.ask} answer={item.answer} />)}
+    </div>
+  </section>
+</Layout>
+
+<script is:inline>
+const asks = document.getElementById('parent-asks');
+const maxHeight = '15rem';
+const paddingTop = '1rem';
+const svgD = {
+  close: '2ZM13 7H11V11H7V13H11V17H13V13H17V11H13V7Z',
+  open: '2ZM7 13H17V11H7',
+};
+
+asks.addEventListener('click', (e) => {
+  const target = e.target;
+  if (target.classList.contains('answer')) return;
+  const parent = target.closest('.ask-header');
+  if (!parent) return;
+  const answer = parent.nextElementSibling;
+  const path = parent.querySelector('svg path');
+  const getD = path.getAttribute('d');
+
+  if (answer.classList.contains('hidden')) {
+    answer.classList.remove('hidden');
+    setTimeIn = setTimeout(() => {
+      answer.style.maxHeight = maxHeight;
+      answer.style.paddingTop = paddingTop;
+      path.setAttribute('d', getD.replace(svgD.close, svgD.open));
+    }, 30);
+  } else {
+    answer.style.maxHeight = 0;
+    answer.style.paddingTop = 0;
+    path.setAttribute('d', getD.replace(svgD.open, svgD.close));
+    setTimeout(() => {
+      answer.classList.add('hidden');
+    }, 300);
+  }
+
+  const otherAnswer = Array.from(asks.querySelectorAll('.answer')).filter(
+    (item) => item !== answer
+  );
+  otherAnswer.forEach((item) => {
+    item.style.maxHeight = 0;
+    item.style.paddingTop = 0;
+    const path = item.previousElementSibling.querySelector('svg path');
+    const getD = path.getAttribute('d');
+    path.setAttribute('d', getD.replace(svgD.open, svgD.close));
+    setTimeout(() => {
+      item.classList.add('hidden');
+    }, 300);
+  });
+  });
+</script>
