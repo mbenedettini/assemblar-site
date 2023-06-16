@@ -13,22 +13,16 @@ import Form from '../components/pages/contact/Form.astro';
 
   <section class='mb-14 md:mb-16'>
     <div id='parent-asks' class='flex flex-col md:flex-row gap-28 md:gap-24'>
-      <div class='grow'>
+      <div class='grow lg:ml-48'>
         <Form />
       </div>
 
-      <div class='grow w-full md:max-w-[50%] aspect-[187/125]'>
-        <div class='absolute aspect-[187/125]'>
-          <img
-            class='w-screen'
-            src='/images/contact-us.webp'
+      <div class='w-full md:max-w-[40%] hidden lg:block'>
+        <img
+            class='md:w-[50%] mt-24'
+            src='/images/airplane.svg'
             alt='Contact Us'
           />
-          <div
-            class='bg-gradient-contact absolute h-[15rem] md:h-[15.5rem] w-[15rem] md:w-[31.75rem] -top-16 md:-top-28 right-0 md:-right-20 -z-10 rounded-l-3xl'
-          >
-          </div>
-        </div>
       </div>
     </div>
   </section>
