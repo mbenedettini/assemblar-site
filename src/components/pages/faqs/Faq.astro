@@ -31,11 +31,11 @@ const { ask, answer } = Astro.props;
     </svg>
   </div>
 
-  <p
-    class='answer hidden max-h-0 pt-0 text-white/80 font-medium overflow-hidden'
-  >
-    {answer}
-  </p>
+  <div
+    class='answer hidden max-h-0 pt-0 text-white/80 font-medium
+           overflow-hidden text-lg'
+    set:html={answer}
+  />
 </div>
 
 <style lang='sass'>
