@@ -5,22 +5,33 @@ import WindowCard from './WindowCard.astro';
 
 const list = [
   {
-    image: '/images/r-teamwork.svg',
-    title: 'Keeping your team up and running',
+    image: '/images/r-insurance.svg',
+    title: 'Full Commitment Guarantee',
     description:
-      'We understand software engineers for hire, and product team roles, ensuring the right policies and processes are developed to keep your team happy and productive. Career development and team culture are fundamental aspects of employee satisfaction, and with Assemblar - you can be sure that your software engineers for hire will be engaged and content for the duration of your service.',
+      `Unlike other agencies, your team will be 100% committed to you and your
+projects. Your team won’t be doing any work, presentations or talks for
+Assemblar or other companies. We do not operate like other agencies that rotate
+people across different clients. It’s our Assemblar Full Commitment Guarantee.
+`,
   },
   {
-    image: '/images/r-insurance.svg',
-    title: 'Full commitment policy',
+    image: '/images/r-teamwork.svg',
+    title: 'Operations',
     description:
-      'Unlike other agencies your team will be 100% committed to you and your projects. Your team won’t be doing any work, presentations or talks for Assemblar or other companies. We do not operate like other agencies that rotate people across different clients. It’s our Assemblar full commitment policy guarantee.',
+      `With an acute understanding of the local landscape, our agency takes care
+      of all essential aspects, providing clients with unmatched support and
+      access to top-tier resources for their operations in Argentina. From
+      logistics and securing office space to organizing local meet-ups for your
+      team and more, we ensure a seamless experience that exceeds
+      expectations.`,
   },
   {
     image: '/images/r-teamcommunication.svg',
-    title: 'Get the best out of your team',
+    title: 'Unlock the full potential of your team',
     description:
-      'We have designed our process with one goal in mind. To maximize your team engagement. As we understand by doing this, we will ensure your productivity is high granting you the best possible ROI for your business.',
+      `Our carefully crafted process is designed with a singular objective in
+      mind: to optimize team engagement, ensuring peak productivity and
+      maximizing your return on investment (ROI).`,
   },
 ];
 ---
@@ -29,11 +40,11 @@ const list = [
   <TitleBox title='Retain' bg='bg-mandy' />
 
   <div class='grid grid-cols-1 lg:grid-cols-2 gap-11 lg:gap-16'>
-    <div class='order-2 md:order-1'>
+    <div class='order-2 md:order-1 hidden lg:block'>
       <WindowCard>
         <div class='flex justify-between items-center mb-8 md:mb-16'>
           <div class='text-base md:text-2xl font-medium md:font-bold'>
-            Your Team (100 team)
+            Your Team
           </div>
 
           <span
@@ -51,7 +62,7 @@ const list = [
               alt='C 4'
             />
             <div class='grow'>
-              <p class='text-base md:text-2xl font-black mb-2'>John Doe</p>
+              <p class='text-base md:text-2xl font-black mb-2'>Federico</p>
               <div class='flex gap-2'>
                 <div
                   class='bg-gradient-title h-4 md:h-5 w-full max-w-[9rem] md:max-w-[15.5rem] rounded-lg'
@@ -71,7 +82,7 @@ const list = [
               alt='C 2'
             />
             <div class='grow'>
-              <p class='text-base md:text-2xl font-black mb-2'>Jesselyn</p>
+              <p class='text-base md:text-2xl font-black mb-2'>Eduardo</p>
               <div class='flex gap-2'>
                 <div
                   class='bg-gradient-title h-4 md:h-5 w-full max-w-[9rem] md:max-w-[15.5rem] rounded-lg'
@@ -86,26 +97,6 @@ const list = [
           </div>
           <div class='flex gap-2 md:gap-7 items-center grow'>
             <img class='w-14 md:w-[4.5rem]' src='/images/w-2.webp' alt='W 2' />
-            <div class='grow'>
-              <p class='text-base md:text-2xl font-black mb-2'>Angelina F</p>
-              <div class='flex gap-2'>
-                <div
-                  class='bg-gradient-title h-4 md:h-5 w-full max-w-[9rem] md:max-w-[15.5rem] rounded-lg'
-                >
-                </div>
-                <div
-                  class='bg-gradient-subtitle h-4 md:h-5 w-full max-w-[4.25rem] md:max-w-[11.25rem] rounded-lg'
-                >
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class='flex gap-2 md:gap-7 items-center grow'>
-            <img
-              class='w-14 md:w-[4.5rem]'
-              src='/images/gloria.webp'
-              alt='Gloria'
-            />
             <div class='grow'>
               <p class='text-base md:text-2xl font-black mb-2'>Gloria</p>
               <div class='flex gap-2'>

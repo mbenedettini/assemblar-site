@@ -6,22 +6,27 @@ import WindowCard from './WindowCard.astro';
 const list = [
   {
     image: '/images/talent-search.svg',
-    title: 'Looking for the right talent',
+    title: 'Interview the right talent with our pre-vetted candidates.',
     description:
-      'We partner with various sourcing agencies that help us find the first batch of candidates in one week or less once a job description is ready. No job description? No problem, we help with that too.',
+      `Thanks to our meticulous screening process, your team will only
+      interview candidates who have already been thoroughly evaluated by us,
+      saving you valuable time and effort.`,
   },
   {
     image: '/images/interview.svg',
-    title: 'Effective interviewing',
-    description:
-      'We will quickly set up the best interview cycle, ensuring it operates efficiently and desirably with all parties.',
+    title: 'Effective interviewing.',
+    description: `We will quickly set up the best interview cycle, ensuring it
+    operates efficiently and desirably with all parties.`,
   },
-  {
-    image: '/images/cooperation.svg',
-    title: 'Utilize our team of professionals for interviews.',
-    description:
-      'Our experienced team specializes in a variety of software engineering fields. Allowing us to handle the interview process, initiating candidate deep dives or issuing candidates a take home project to ensure a good match is found.',
-  },
+  // {
+  //   image: '/images/cooperation.svg',
+  //   title: 'Utilize our team of professionals for interviews.',
+  //   description:
+  //     `Our experienced team specializes in a variety of software engineering
+  //     fields. Allowing us to handle the interview process, initiating candidate
+  //     deep dives or issuing candidates a take home project to ensure a good
+  //     match is found.`,
+  // },
 ];
 ---
 
@@ -29,13 +34,13 @@ const list = [
   <TitleBox title='Interview' />
 
   <div class='grid grid-cols-1 lg:grid-cols-2 gap-11 lg:gap-16'>
-    <div class='order-2 md:order-1'>
+    <div class='order-2 md:order-1 hidden lg:block'>
       <WindowCard>
         <div class='flex justify-between items-center mb-8 md:mb-10'>
           <div class='flex gap-3 md:gap-7 items-center grow'>
             <img class='w-10 md:w-[4.5rem]' src='/images/abc.svg' alt='abc' />
             <div class='grow'>
-              <p class='text-sm md:text-2xl font-bold mb-2'>PT ABC</p>
+              <p class='text-base md:text-2xl font-bold mb-2'>ABC Inc.</p>
               <div
                 class='bg-gradient-title h-4 md:h-5 w-full max-w-[8.25rem] md:max-w-[12.5rem] rounded-lg'
               >
@@ -43,10 +48,10 @@ const list = [
             </div>
           </div>
 
-          <p class='text-sm md:text-base font-medium'>100 Candidate</p>
+          <p class='text-sm md:text-base font-medium'>59 Candidates</p>
         </div>
 
-        <p class='text-xl mb-8'>List Candidate</p>
+        <p class='text-xl mb-8'>List Candidates</p>
 
         <div class='flex justify-between items-center mb-10'>
           <div class='flex gap-2 md:gap-7 items-center grow'>
@@ -72,28 +77,6 @@ const list = [
               src='/images/cursor-click-fill.svg'
               alt='Cursor Click Fill'
             />
-          </span>
-        </div>
-
-        <div class='flex justify-between items-center mb-9 md:mb-10'>
-          <div class='flex gap-2 md:gap-7 items-center grow'>
-            <img class='w-14 md:w-[4.5rem]' src='/images/w-2.webp' alt='W 2' />
-            <div class='grow'>
-              <div
-                class='bg-gradient-title h-4 md:h-5 w-full max-w-[7.5rem] md:max-w-[16.5rem] rounded-lg mb-4'
-              >
-              </div>
-              <div
-                class='bg-gradient-subtitle h-4 md:h-5 w-full max-w-[4.5rem] md:max-w-[9.75rem] rounded-lg'
-              >
-              </div>
-            </div>
-          </div>
-
-          <span
-            class='border border-primary text-sm font-bold py-2 md:py-3 px-5 md:px-10 rounded-3xl relative'
-          >
-            Interview
           </span>
         </div>
 
@@ -123,7 +106,7 @@ const list = [
                 alt='Candidate 4'
               />
             </div>
-            <p class='text-sm md:text-base'>50+ more candidate</p>
+            <p class='text-sm md:text-base'>10+ more candidates</p>
           </div>
         </div>
       </WindowCard>
