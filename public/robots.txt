@@ -3,4 +3,4 @@ Allow: /
 Allow: /contact
 Allow: /about-us
 Allow: /faqs
-Allow: /for-candidates
+Allow: /careers
